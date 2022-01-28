@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y decuentos | XD</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        section{
+            width: 300px;
+            background-image: linear-gradient(to top, #bbcb0c, #cba900, #d58500, #d95d00, #d6280e);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+         form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        input, button {
+            border-radius: 5px;
+            margin: 3px;
+        }
+        p {
+            height: 20px;
+            color: rgb(12, 11, 11);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Porcentajes y descuentos</h1>
+    </header>
+    <section>
+        <h3>calcula el precio a pagar de tus productos</h3>
+        <form action="">
+            <label for="inputPrice">Escribe el precio de  tu producto</label>
+            <input type="number" id="inputPrice"/>
+            <label for="inputDiscount">Escribe el precio de  tu producto</label>
+            <input type="number" id="inputDiscount"/>
+            <button type="button" onclick="onClickButtonPriceDiscount()">
+                Calcular el precio con decuento
+            </button>
+            <p id="precioP"></p>
+        </form>
+    </section>
+    <script src="porcentaje.js"></script>
+</body>
+</html>

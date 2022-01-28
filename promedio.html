@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio | XD</title>
+</head>
+<body>
+    <div>
+        <h3>Calcula El promedio de cualquier lista numérica</h3>
+        <form action="">
+        <label for="agregaPromedio">
+            agraga uno por uno los elementos a la lista<br>
+        </label>
+        <input type="number" id="agregaPromedio">
+        <button type="button" onclick="agregaArrayPromedio()">Agrega</button>
+        <label for="listaPromedio">Introduce aqui tu lista completa<br></label>
+        <input type="number" id="listaPromedio">
+        <button type="button" onclick="agregaArrayAutomaticoPromedio()">agregar</button><br>
+        <p id="arrayPromedio"></p>
+        <button type="button" onclick="calculaPromedio()">Calcular promedio</button>
+        <p id="parrafoSalidaPromedio"></p>
+        </form>
+    </div>
+    <script src="./promedio.js"></script>
+</body>
+</html>

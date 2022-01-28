@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras gemétricas | XD</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            border-radius: 15px;
+            border: 3px solid black;
+            background-color: #141010;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        section div {
+            margin-inline-end: 20px;
+            max-width: 500px;
+        }
+        h1, h3{
+            
+            color: rgb(156, 155, 150);
+            text-align: center;
+        }
+        h1 {
+            background-color: #b4b6b01f;
+            padding: 0 10px;
+            border-radius: 10px;
+        }
+        h1:hover, h3:hover {
+            color: rgb(180, 180, 175);
+        }
+        p {
+            padding: 10px;
+            background-color: rgb(156, 155, 150);
+            text-align: center;
+            color: black;
+            width: 80%;
+            word-wrap: break-word;
+            text-align: center;
+            text-overflow: hidden;
+            font-weight: bold;
+            
+        }
+         form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(139, 130, 130);
+            border: 3px solid rgb(153, 145, 145) ;
+            border-radius: 15px;
+            padding: 10px;
+            background-color: #4d524c;
+            color: rgb(172, 157, 90);
+            box-shadow: 10px 10px 10px 5px rgba(245, 243, 243, 0.26);
+        }
+        
+        form label, input, button{
+            margin-block-end: 10px;
+            border-radius: 10px;
+            padding: 3px;
+        }
+        input {
+            background-color: #b4b6b0;
+            border: 2px solid#b4b6b0;
+        }
+        input:hover {
+            border: 2px solid rgb(138, 133, 133)
+        }
+        button{
+            background-color: #383b37;
+            color: rgb(167, 158, 158);
+        }
+        button:hover {
+            color: rgb(107, 102, 102);
+            height: 24px;
+        }
+        #array{
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <h1>Figuras geométricas</h1>
+    <section>
+        
+        <div>
+            <h3>Calcula el area de un cuadrado</h3>
+        <form action="" class="form">
+            <label for="InputCuadrado">
+                Escribe un lado del cuadrado:
+            </label>
+            <input id="InputCuadrado" type="number">
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrado()">
+                Calcular área
+            </button>
+        </form>
+        </div>
+        <div>
+            <h3>Calcula el area de un triángulo</h3>
+        <form action="" class="form">
+            <label for="Inputlado1triangulo">
+                Escribe cada lado :
+            </label>
+            <input id="Inputlado1triangulo" type="number" required>
+           
+            <input id="Inputlado2triangulo" type="number" name="base2" required>
+            <label for="Inputbasetriangulo">
+                Escribe la base:
+            </label>
+            <input id="Inputbasetriangulo" type="number"required>
+            <label for="Inputalturatriangulo">
+                Escribe la altura :
+            </label>
+            <input id="Inputalturatriangulo" type="number" required>
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaTriangulo()">
+                Calcular área
+            </button>
+        </form>
+        </div>
+        <div>
+            <h3>Calcula el area de un triángulo isóseles</h3>
+        <form action="" class="form">
+            <label for="Inputlado1triangulois">
+                Escribe cada lado :
+            </label>
+            <input id="Inputlado1triangulois" type="number" required>
+           
+            <input id="Inputlado2triangulois" type="number" name="base2" required>
+            <label for="Inputbasetriangulois">
+                Escribe la base:
+            </label>
+            <input id="Inputbasetriangulois" type="number"required>
+            <label for="">La altura es:</label>
+            <p id="alturaParrafo"></p>
+            <button type="button" onclick="calcularPerimetroTriangulois()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaTriangulois()">
+                Calcular área
+            </button>
+        </form>
+        </div>
+        <div>
+            <h3>Calcula el area de un círculo</h3>
+        <form action="" class="form">
+            <label for="InputRadio">
+                Escribe el radio del círculo:
+            </label>
+            <input id="InputRadio" type="number">
+            <button type="button" onclick="calcularPerimetroCirculo()">
+                Calcular el perímetro
+            </button>
+            <button type="button" onclick="calcularAreaCirculo()">
+                Calcular área
+            </button>
+        </form>
+        </div>
+    </section>
+    <h1>Calcula el porcentaje de cualquier cantidad</h1>
+    <section>
+        <div>
+            <h3>calcula el precio a pagar de tus productos</h3>
+            <form action="">
+                <label for="inputPrice">Escribe el precio de  tu producto</label>
+                <input type="number" id="inputPrice"/>
+                <label for="inputDiscount">Escribe el porcentaje de descuento de  tu producto</label>
+                <input type="number" id="inputDiscount"/>
+                <button type="button" onclick="onClickButtonPriceDiscount()">
+                    Calcular el precio con decuento
+                </button>
+                <p id="precioP"></p>
+            </form>
+        </div>
+        
+    </section>
+    <h1>Calcula el Promedio, la Mediana y la Moda</h1>
+    <section>
+        <div>
+            <h3>Calcula El promedio de cualquier lista numérica</h3>
+            <form action="">
+            <label for="agregaPromedio">
+                agraga uno por uno los elementos a la lista<br>
+            </label>
+            <input type="number" id="agregaPromedio">
+            <button type="button" onclick="agregaArrayPromedio()">Agrega</button>
+            <label for="listaPromedio">Introduce aqui tu lista completa<br></label>
+            <input type="number" id="listaPromedio">
+            <button type="button" onclick="agregaArrayAutomaticoPromedio()">agregar</button><br>
+            <p id="arrayPromedio"></p>
+            <button type="button" onclick="calculaPromedio()">Calcular promedio</button>
+            <p id="parrafoSalidaPromedio"></p>
+            </form>
+        </div>
+        <div>
+            <h3>Calcula la Mediana de cualquier lista</h3>
+            <form action="">
+            <label for="">
+                agraga uno por uno los elementos a la lista<br>
+            </label>
+            <input type="number" id="agregaMediana">
+            <button type="button" onclick="agregaArrayMediana()">Agrega</button>
+            <label for="listaMediana">Introduce aqui tu lista completa<br></label>
+            <input type="number" id="listaMediana">
+            <button type="button" onclick="agregaArrayAutomaticoMediana()">agregar</button><br>
+            <p id="arrayMediana"></p>
+            <button type="button" onclick="calculaMediana()">Calcular mediana</button>
+            <p id="parrafoSalidaMediana"></p>
+            </form>
+        </div>
+        <div>
+            <h3>Calcula la Moda de cualquier lista</h3>
+            <form action="">
+            <label for="">
+                agraga uno por uno los elementos a la lista<br>
+            </label>
+            <input type="text" id="agrega">
+            <button type="button" onclick="agregaArray()">Agrega</button>
+            <label for="lista">Introduce aqui tu lista completa<br></label>
+            <input type="text" id="lista">
+            <button type="button" onclick="agregaArrayAutomatico()">agregar</button><br>
+            <p id="array"></p>
+            <button type="button" onclick="calculaModa()">Calcular moda</button>
+            <p id="parrafoSalida"></p>
+            </form>
+        </div>
+        
+        
+    </section>
+    
+    
+    <script src="./figuras.js"></script>
+    <script src="./promedio.js"></script>
+    <script src="./mediana.js"></script>
+    <script src="./porcentaje.js"></script>
+    <script src="./moda.js"></script>
+</body>
+</html>

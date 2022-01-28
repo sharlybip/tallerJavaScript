@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda | XD</title>
+    <style>
+        #array {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calcula la moda de cualquier colección</h1>
+    </header>
+    <section>
+        <div>
+            <form action="">
+            <label for="">
+                agraga elemenntos a la lista<br>
+            </label>
+            <input type="text" id="agrega">
+            <button type="button" onclick="agregaArray()">Agrega</button>
+            <p id="array"></p>
+
+            <label for="lista">Introduce aqui tu lista completa<br></label>
+            <input type="text" id="lista">
+            <button type="button" onclick="agregaArrayAutomatico()">agregar</button><br>
+            <button type="button" onclick="calculaModa()">Calcular moda</button>
+            </form>
+        </div>
+        
+        <p id="parrafoSalida"></p>
+    </section>
+    <script src="./moda.js"></script>
+</body>
+</html>
